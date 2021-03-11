@@ -1,0 +1,39 @@
+###################  项目启动端口  ###################
+server:
+  port: 8081
+
+###################  spring配置  ###################
+spring:
+
+
+  profiles:
+    active: dev
+##########################################################
+###################  开发环境的profile  ###################
+##########################################################
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/flowable?serverTimezone=UTC&useSSL=false&nullCatalogMeansCurrent=true
+    username: flowable
+    password: flowable
+
+
+logging:
+  level.root: info
+  level.com.haiyang: debug
+  path: logs/
+  file: flowable-test.log
+flowable:
+  async-executor-activate: false
+  database-schema: flowable
+  database-schema-update: false
+
+
+---
+logging:
+  level.root: warn
+  path: logs/
+  file: flowable-test.log
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

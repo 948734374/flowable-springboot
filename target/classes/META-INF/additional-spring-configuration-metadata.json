@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.activiti.database-schema-update",
+      "type": "java.lang.String",
+      "description": "Description for spring.activiti.database-schema-update."
+  }
+] }
